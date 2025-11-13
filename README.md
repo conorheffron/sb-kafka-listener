@@ -1,5 +1,7 @@
 # sb-kafka-listener
 
+[![Java CI with Gradle](https://github.com/conorheffron/sb-kafka-listener/actions/workflows/gradle.yml/badge.svg)](https://github.com/conorheffron/sb-kafka-listener/actions/workflows/gradle.yml)
+
 ## Overview
 - Sample Kafka Consumer Service.
 
