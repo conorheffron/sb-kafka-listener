@@ -1,14 +1,10 @@
 package net.ironoc.kafka.listener
 
 import org.apache.kafka.clients.consumer.ConsumerRecord
-import org.slf4j.LoggerFactory
+import org.slf4j.Logger
 import org.springframework.kafka.annotation.KafkaListener
-import org.springframework.stereotype.Component
 
-@Component
-class MessageListener {
-
-    private val logger = LoggerFactory.getLogger(MessageListener::class.java)
+class MessageListener(private val logger: Logger) {
 
     @KafkaListener(topics = ["\${spring.kafka.consumer.topic}"], groupId = "\${spring.kafka.consumer.group-id}")
     fun listen(record: ConsumerRecord<String, String>) {
