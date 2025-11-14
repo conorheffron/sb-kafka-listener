@@ -10,16 +10,22 @@ version = "0.0.2-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    gradlePluginPortal()
 }
 
 dependencies {
+    val kotlinMockitoVersion = "6.1.0"
+
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.kafka:spring-kafka")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation(kotlin("reflect"))
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.kafka:spring-kafka-test")
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:$kotlinMockitoVersion")
     implementation(kotlin("stdlib-jdk8"))
 }
 

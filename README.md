@@ -13,7 +13,15 @@
 ./gradlew clean build
 ```
 
+## Run Tests
+```shell
+./gradlew test -i
+```
+
 ## Run Kafka Listener Service
 ```shell
 ./gradlew bootRun
 ```
+
+## Debug Listener & Catch Incoming Message per Test Topic from Kafka Broker
+![kafka-received-message-debug-catch](./screenshots/kafka-received-message-debug-catch.png)

@@ -1,10 +1,11 @@
 package net.ironoc.kafka.config
 
+import net.ironoc.kafka.listener.MessageListener
 import org.apache.kafka.clients.consumer.ConsumerConfig
 import org.apache.kafka.common.serialization.StringDeserializer
+import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.kafka.annotation.EnableKafka
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory
 import org.springframework.kafka.core.ConsumerFactory
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory
@@ -29,5 +30,11 @@ class KafkaConsumerConfig(private val kafkaProps: KafkaProperties) {
         val factory = ConcurrentKafkaListenerContainerFactory<String, String>()
         factory.consumerFactory = consumerFactory()
         return factory
+    }
+
+    @Bean
+    fun MessageListener(): MessageListener {
+        val logger = LoggerFactory.getLogger(MessageListener::class.java)
+        return MessageListener(logger)
     }
 }
