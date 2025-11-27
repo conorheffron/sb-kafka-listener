@@ -26,9 +26,9 @@ class KafkaConsumerConfig(private val kafkaProps: KafkaProperties) {
     }
 
     @Bean
-    fun kafkaListenerContainerFactory(): ConcurrentKafkaListenerContainerFactory<String, String> {
+    fun kafkaListenerContainerFactory(consumerFactory: ConsumerFactory<String, String>): ConcurrentKafkaListenerContainerFactory<String, String> {
         val factory = ConcurrentKafkaListenerContainerFactory<String, String>()
-        factory.consumerFactory = consumerFactory()
+        factory.consumerFactory = consumerFactory
         return factory
     }
 

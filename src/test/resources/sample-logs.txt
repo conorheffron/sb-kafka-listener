@@ -1,0 +1,144 @@
+> Task :bootRun
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2025-11-14T17:12:24.324Z  INFO 7065 --- [           main] net.ironoc.kafka.KafkaConsumerAppKt      : Starting KafkaConsumerAppKt using Java 17.0.16 with PID 7065 (/Users/conorheffron/workspace/sb-kafka-listener/sb-kafka-listener/build/classes/kotlin/main started by conorheffron in /Users/conorheffron/workspace/sb-kafka-listener/sb-kafka-listener)
+2025-11-14T17:12:24.328Z  INFO 7065 --- [           main] net.ironoc.kafka.KafkaConsumerAppKt      : No active profile set, falling back to 1 default profile: "default"
+2025-11-14T17:12:25.308Z  INFO 7065 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-14T17:12:25.319Z  INFO 7065 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-14T17:12:25.319Z  INFO 7065 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2025-11-14T17:12:25.360Z  INFO 7065 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-14T17:12:25.362Z  INFO 7065 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 968 ms
+2025-11-14T17:12:25.838Z  INFO 7065 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-14T17:12:25.878Z  INFO 7065 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-ironoc-net-group-1
+	client.rack =
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = ironoc-net-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metadata.recovery.strategy = none
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.header.urlencode = false
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2025-11-14T17:12:25.916Z  INFO 7065 --- [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2025-11-14T17:12:26.063Z  INFO 7065 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.9.1
+2025-11-14T17:12:26.064Z  INFO 7065 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: f745dfdcee2b9851
+2025-11-14T17:12:26.065Z  INFO 7065 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1763140346062
+2025-11-14T17:12:26.068Z  INFO 7065 --- [           main] o.a.k.c.c.i.ClassicKafkaConsumer         : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Subscribed to topic(s): ironoc-test-topic
+2025-11-14T17:12:26.088Z  INFO 7065 --- [           main] net.ironoc.kafka.KafkaConsumerAppKt      : Started KafkaConsumerAppKt in 2.231 seconds (process running for 2.534)
+2025-11-14T17:12:26.444Z  INFO 7065 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Cluster ID: 5L6g3nShT-eMCtK--X86sw
+2025-11-14T17:12:26.445Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2025-11-14T17:12:26.447Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] (Re-)joining group
+2025-11-14T17:12:26.470Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Request joining group due to: need to re-join with the given member-id: consumer-ironoc-net-group-1-17b820d7-546d-43ca-88fd-a0edc3377429
+2025-11-14T17:12:26.471Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] (Re-)joining group
+2025-11-14T17:12:29.481Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Successfully joined group with generation Generation{generationId=15, memberId='consumer-ironoc-net-group-1-17b820d7-546d-43ca-88fd-a0edc3377429', protocol='range'}
+2025-11-14T17:12:29.491Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Finished assignment for group at generation 15: {consumer-ironoc-net-group-1-17b820d7-546d-43ca-88fd-a0edc3377429=Assignment(partitions=[ironoc-test-topic-0])}
+2025-11-14T17:12:29.521Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Successfully synced group in generation Generation{generationId=15, memberId='consumer-ironoc-net-group-1-17b820d7-546d-43ca-88fd-a0edc3377429', protocol='range'}
+2025-11-14T17:12:29.522Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Notifying assignor about the new Assignment(partitions=[ironoc-test-topic-0])
+2025-11-14T17:12:29.525Z  INFO 7065 --- [ntainer#0-0-C-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-ironoc-net-group-1, groupId=ironoc-net-group] Adding newly assigned partitions: ironoc-test-topic-0
+2025-11-14T17:12:29.534Z  INFO 7065 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerUtils        : Setting offset for partition ironoc-test-topic-0 to the committed offset FetchPosition{offset=27, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=4}}
+2025-11-14T17:12:29.536Z  INFO 7065 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : ironoc-net-group: partitions assigned: [ironoc-test-topic-0]
+2025-11-14T17:12:55.126Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 27, Key: mj, Value: spiderman
+2025-11-14T17:26:42.471Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 28, Key: heart, Value: ironman
+2025-11-14T17:26:48.359Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 29, Key: green, Value: hulk
+2025-11-14T17:27:21.506Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 30, Key: exp, Value: wolverine
+2025-11-14T17:27:50.793Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 31, Key: dc, Value: comics
+2025-11-14T17:27:58.836Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 32, Key: marvel, Value: universe
+2025-11-14T17:28:06.211Z  INFO 7065 --- [ntainer#0-0-C-1] n.ironoc.kafka.listener.MessageListener  : Received message -> Topic: ironoc-test-topic, Partition: 0, Offset: 33, Key: creator, Value: Stan Lee
