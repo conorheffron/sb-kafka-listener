@@ -7,6 +7,10 @@ spring:
       value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       auto-offset-reset: earliest
       topic: ironoc-test-topic
+      enable-auto-commit: false
+    listener:
+      missing-topics-fatal: false
+
 logging:
   level:
     root: INFO
