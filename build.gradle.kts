@@ -35,3 +35,32 @@ tasks.withType<Test> {
 kotlin {
     jvmToolchain(17)
 }
+
+tasks.test {
+    // Show detailed test results in console
+    testLogging {
+        // Show events for passed, skipped, and failed tests
+        events("passed", "skipped", "failed")
+
+        // Show full exception stack traces
+        exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
+
+        // Show output from tests (System.out/System.err)
+        showStandardStreams = true
+    }
+
+    // Optional: run tests sequentially for easier reading
+    outputs.upToDateWhen { false } // Always run tests
+
+    afterSuite(KotlinClosure2<TestDescriptor, TestResult, Unit>({ desc, result ->
+        if (desc.parent == null) { // will match the outermost suite
+            println(
+                "Results: ${result.resultType} " +
+                        "(${result.testCount} tests, " +
+                        "${result.successfulTestCount} passed, " +
+                        "${result.failedTestCount} failed, " +
+                        "${result.skippedTestCount} skipped)"
+            )
+        }
+    }))
+}
