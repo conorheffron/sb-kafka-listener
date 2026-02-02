@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    val kotlinMockitoVersion = "6.2.2"
+    val kotlinMockitoVersion = "6.2.3"
 
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.springframework.boot:spring-boot-starter-web")
