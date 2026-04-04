@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "net.ironoc.kafka"
-version = "0.0.9-SNAPSHOT"
+version = "0.1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
